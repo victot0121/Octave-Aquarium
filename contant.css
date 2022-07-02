@@ -466,10 +466,14 @@ nav {
   .span__blue {
     color: var(--color-orange);
     font-size: 2.1rem;
+    border: none;
+    border-bottom: 2px solid var(--color-orange);
   }
   
   .span__blue-two {
     color: var(--color-orange);
     font-size: 2.6rem;
     font-weight: bolder;
+    border: none;
+    border-bottom: 2px solid var(--color-orange);
   }

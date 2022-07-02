@@ -253,10 +253,14 @@ nav {
   .span__blue {
     color: #ffa500;
     font-size: 2.1rem;
+    border: none;
+    border-bottom: 2px solid #ffa500;
   }
   
   .span__blue-two {
     color: #ffa500;
     font-size: 2.6rem;
     font-weight: bolder;
+    border: none;
+    border-bottom: 2px solid #ffa500;
   }
