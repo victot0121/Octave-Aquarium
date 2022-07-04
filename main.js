@@ -43,3 +43,18 @@ starsEl.forEach((starEl, index) => {
       emojiEl.style.color = colorsArray[index];
     });
   }
+
+
+
+
+  function toggleText(){
+    var x = document.getElementById("Myid");
+    if (x.style.display === "none") { 
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+
+
+

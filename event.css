@@ -121,7 +121,7 @@ input, textarea, select {
     display: block;
     margin: auto;
     margin-bottom: 1rem;
-    width: 60%;
+    width: 40%;
     outline: none;
     padding: 0.4rem;
     border: 1px solid var(--secondary-color);

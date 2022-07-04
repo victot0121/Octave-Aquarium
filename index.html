@@ -12,6 +12,8 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="./index.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <title>Octave Aquarium</title>
 </head>
@@ -54,30 +56,32 @@
 
   <div id="Services" class="Services">
     <div class="about__one Services__contant">
-      <h2>Services</h2>
+      <h2> Our Services</h2>
     </div>
     <div class="Services__contant__one">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Ipsum cum dignissimos hic, totam fuga deserunt!</p>
+      <p>If you are looking to get in touch with Steve or would like to schedule an aquarium cleaning or consultation, please fill out the form at the bottom of the page!</p>
     </div>
     <div class="box__contant">
       <div class="box">
         <div class="in-div">
-          <h4>lorem</h4>
+          <h4>Aquarium Maintenance</h4>
         </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt omnis molestias ipsum.</p>
+        <p>Our conveniently scheduled maintenance services include cleaning and updating system information, along with fish and supply replacements. .</p>
       </div>
       <div class="box">
         <div class="in-div">
-          <h4>lorem</h4>
+          <h4>Aquarium Installation</h4>
         </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt omnis molestias ipsum.</p>
+        <p>Does the thought of setting up your new aquarium seem overwhelming? Fortunately,
+           you don’t have to go at it alone. Our team of experienced 
+           aquatic specialists will do the job for you. We will work around your schedule to deliver and install your aquarium. </p>
       </div>
       <div class="box">
         <div class="in-div">
-          <h4>lorem</h4>
+          <h4>Aquarium Repair</h4>
         </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt omnis molestias ipsum.</p>
+        <p>When you are dealing with large amounts of water, things breaking can often times be very     worrisome. Good news, we’ve dealt with it all! While we dont repair things like cracked glass,
+           we provide solutions to each and every problem.</p>
       </div>
       <div>
 
@@ -128,7 +132,7 @@
 
   <div class="GoogleMaps__section">
     <div id="map" class=" GoogleMaps">
-     
+
     </div>
     <div class="weekly__section">
       <h4>open hours</h4>
@@ -143,13 +147,17 @@
       </ul>
     </div>
   </div>
-   
+
 
   <div class="feedback__div">
-    <h3>feed back</h3>
+    <h3> feedback  Rating</h3>
+
+    <p id="Myid" class="Myid">your feedback was help fully</p>
   </div>
+
+
   <div class="emoji">
-    
+
     <div class="feedback-container">
       <div class="emoji-container">
         <i class="far fa-angry fa-3x"></i>
@@ -167,6 +175,8 @@
       </div>
     </div>
   </div>
+
+  <button class="btn2__two" onclick="toggleText()">sumbit</button>
   <footer class="footer">
     <div class="footer_one">
       <h3>Welcome to Octave <span class="">A</span>quarium</h3>
@@ -176,6 +186,36 @@
     </div>
   </footer>
   <script src="main.js"></script>
+  <script>
+
+    function initMap() {
+       const uluru = { lat: 6.4983, lng: 3.3486};
+
+       const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: uluru,
+      });
+     
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+
+      const infoWindow = new google.maps.infoWindow({
+        content: '<h1>surlere</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open( map, uluru);
+      })
+      
+    }
+
+    window.initMap = initMap;
+  </script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCr6S3ucd3uN4Ek_TNjdoEf2nKFhdBNbM&callback=initMap"
+    defer></script>
 </body>
 
 </html>
