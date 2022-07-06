@@ -77,10 +77,9 @@ function changeImg(changeDir){
          calcNewImg = 1;
       }
     }else if (changeDir === 0){
-      calcNewImg = getLastedOpenImg - 1;
-      if(calcNewImg < 1){
-         // calcNewImg = getLastedOpenImg.length;
-         calcNewImg = 1;
+      calcNewImg = --getLastedOpenImg;
+      if(calcNewImg < 0){
+         calcNewImg = --galleryImages.length;
       }
     }
     newImg.setAttribute("src", "img/image" + calcNewImg + ".jpg");
